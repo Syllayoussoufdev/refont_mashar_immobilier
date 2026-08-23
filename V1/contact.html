@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO de base (à personnaliser par page) -->
+  <title>Contact — Je cherche un bien ou je confie ma gestion | MASHAR Immobilier</title>
+  <meta name="description" content="Contactez MASHAR Immobilier à Abidjan : formulaire recherche de bien, formulaire gestion locative, WhatsApp direct, adresse et carte à Abobo Plateau Dokui." />
+
+  <!-- Open Graph (partage WhatsApp / réseaux) -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="Contact — MASHAR Immobilier Abidjan" />
+  <meta property="og:description" content="Je cherche un bien ou je confie ma gestion : contactez MASHAR Immobilier dès aujourd'hui." />
+  <meta property="og:image"       content="assets/og-mashar.jpg" />
+  <meta property="og:url"         content="https://mashar-immobilier.ci" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Polices Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Icônes Lucide (SVG inline, léger) -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Design System MASHAR -->
+  <link rel="stylesheet" href="css/mashar.css" />
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════════
+       NAVBAR
+       ══════════════════════════════════════════ -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="navbar__inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="navbar__logo" aria-label="MASHAR Immobilier — Accueil">
+        <span class="navbar__logo-name">MASHAR</span>
+        <span class="navbar__logo-sub">Immobilier &amp; Services</span>
+      </a>
+
+      <!-- Navigation principale -->
+      <nav class="navbar__nav" role="navigation" aria-label="Navigation principale">
+        <a href="index.html"           class="navbar__link" data-page="index">Accueil</a>
+        <a href="nos-biens.html"       class="navbar__link" data-page="biens">Nos Biens</a>
+        <a href="gestion-locative.html"class="navbar__link" data-page="gestion">Gestion Locative</a>
+        <a href="a-propos.html"        class="navbar__link" data-page="apropos">À Propos</a>
+        <a href="contact.html"         class="navbar__link" data-page="contact">Contact</a>
+      </nav>
+
+      <!-- CTA + Hamburger -->
+      <div class="flex gap-3" style="align-items:center;">
+        <a
+          href="https://wa.me/2250707889831?text=Bonjour%20MASHAR%2C%20je%20souhaite%20avoir%20des%20informations."
+          class="navbar__cta"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Nous contacter sur WhatsApp"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+          </svg>
+          WhatsApp
+        </a>
+
+        <!-- Hamburger -->
+        <button
+          class="navbar__hamburger"
+          id="hamburger"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div><!-- /.navbar__inner -->
+
+    <!-- Menu mobile -->
+    <nav
+      class="navbar__mobile-menu"
+      id="mobile-menu"
+      role="navigation"
+      aria-label="Menu mobile"
+    >
+      <a href="index.html"            class="navbar__link" data-page="index">Accueil</a>
+      <a href="nos-biens.html"        class="navbar__link" data-page="biens">Nos Biens</a>
+      <a href="gestion-locative.html" class="navbar__link" data-page="gestion">Gestion Locative</a>
+      <a href="a-propos.html"         class="navbar__link" data-page="apropos">À Propos</a>
+      <a href="contact.html"          class="navbar__link" data-page="contact">Contact</a>
+      <a
+        href="https://wa.me/2250707889831?text=Bonjour%20MASHAR%2C%20je%20souhaite%20avoir%20des%20informations."
+        class="btn btn--whatsapp btn--full"
+        target="_blank"
+        rel="noopener noreferrer"
+        style="margin-top: 8px;"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+        </svg>
+        Nous contacter sur WhatsApp
+      </a>
+    </nav>
+
+  </header><!-- /navbar -->
+
+
+  <!-- ══════════════════════════════════════════
+       CONTENU PRINCIPAL — À remplacer par page
+       ══════════════════════════════════════════ -->
+  <main id="main-content" role="main">
+
+    <!-- ══════════════════════════════════════════
+         HERO
+         ══════════════════════════════════════════ -->
+    <section class="hero" style="min-height:48vh;" aria-label="Bannière contact">
+      <div class="container hero__inner" style="text-align:center;">
+        <p class="label-overline text-gold animate-fade-up animate-delay-1">Contact</p>
+        <h1 class="display-lg animate-fade-up animate-delay-2" style="margin: 20px auto 0; max-width: 680px;">
+          Parlons de <em style="color: var(--color-gold); font-style:normal;">votre projet</em>
+        </h1>
+        <p class="body-lg animate-fade-up animate-delay-3" style="margin: 20px auto 0; max-width: 560px;">
+          Que vous cherchiez un bien ou souhaitiez confier votre gestion, notre équipe vous répond rapidement.
+        </p>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         DOUBLE FORMULAIRE (ONGLETS)
+         ══════════════════════════════════════════ -->
+    <section class="section" aria-labelledby="formulaires-title">
+      <div class="container" style="max-width: 780px;">
+        <h2 id="formulaires-title" class="sr-only">Formulaires de contact</h2>
+
+        <div class="tabs" data-tabs data-animate>
+
+          <div class="tabs__nav">
+            <button type="button" class="tabs__btn active" data-tab="panel-cherche">🔍 Je cherche un bien</button>
+            <button type="button" class="tabs__btn" data-tab="panel-confie">🤝 Je confie mon bien</button>
+          </div>
+
+          <!-- ── Onglet 1 : Je cherche un bien ── -->
+          <div class="tabs__panel active" id="panel-cherche">
+            <div class="card" style="padding: 40px;">
+              <h3 class="heading-md" style="color: var(--color-navy); margin-bottom: 8px;">
+                Dites-nous ce que vous cherchez, nous le trouvons pour vous.
+              </h3>
+              <p class="body-sm text-muted" style="margin-bottom: 28px;">
+                Remplissez ce formulaire, nous vous recontactons rapidement sur WhatsApp.
+              </p>
+
+              <form onsubmit="return envoyerFormulaireRecherche(event)">
+                <div class="grid-2" style="gap: 20px;">
+                  <div class="form-group">
+                    <label class="form-label" for="ch-nom">Nom &amp; Prénom</label>
+                    <input class="form-input" type="text" id="ch-nom" name="nom" required />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="ch-tel">Numéro Téléphone (WhatsApp)</label>
+                    <input class="form-input" type="tel" id="ch-tel" name="telephone" placeholder="07 XX XX XX XX" required />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="ch-type">Type de bien recherché</label>
+                    <select class="form-select" id="ch-type" name="type_bien" required>
+                      <option value="" disabled selected>Sélectionnez un type</option>
+                      <option value="Appartement">Appartement</option>
+                      <option value="Villa">Villa</option>
+                      <option value="Studio">Studio</option>
+                      <option value="Magasin">Magasin</option>
+                      <option value="Bureau">Bureau</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="ch-budget">Budget mensuel maximum (FCFA)</label>
+                    <input class="form-input" type="number" id="ch-budget" name="budget" placeholder="Ex. 200000" min="0" />
+                  </div>
+                  <div class="form-group" style="grid-column: 1/-1;">
+                    <label class="form-label" for="ch-zone">Zone souhaitée</label>
+                    <input class="form-input" type="text" id="ch-zone" name="zone" placeholder="Ex. Abobo Dokui, Angré, Cocody..." required />
+                  </div>
+                  <div class="form-group" style="grid-column: 1/-1;">
+                    <label class="form-label" for="ch-message">Message / Précisions particulières</label>
+                    <textarea class="form-textarea" id="ch-message" name="message" placeholder="Nombre de pièces souhaité, préférences, délai..."></textarea>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn--primary btn--lg" style="width:100%; margin-top:24px;">
+                  Envoyer ma recherche
+                </button>
+              </form>
+            </div>
+          </div>
+
+          <!-- ── Onglet 2 : Confier mon bien ── -->
+          <div class="tabs__panel" id="panel-confie">
+            <div class="card" style="padding: 40px;">
+              <h3 class="heading-md" style="color: var(--color-navy); margin-bottom: 8px;">
+                Vous êtes propriétaire ? Confiez-nous votre gestion.
+              </h3>
+              <p class="body-sm text-muted" style="margin-bottom: 28px;">
+                Remplissez ce formulaire, notre équipe vous recontacte pour une estimation.
+              </p>
+
+              <form onsubmit="return envoyerFormulaireConfier(event)">
+                <div class="grid-2" style="gap: 20px;">
+                  <div class="form-group">
+                    <label class="form-label" for="co-nom">Nom &amp; Prénom du Propriétaire</label>
+                    <input class="form-input" type="text" id="co-nom" name="nom" required />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="co-tel">Téléphone</label>
+                    <input class="form-input" type="tel" id="co-tel" name="telephone" placeholder="07 XX XX XX XX" required />
+                  </div>
+                  <div class="form-group" style="grid-column: 1/-1;">
+                    <label class="form-label" for="co-email">Email</label>
+                    <input class="form-input" type="email" id="co-email" name="email" placeholder="vous@email.com" />
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="co-type">Type de bien</label>
+                    <select class="form-select" id="co-type" name="type_bien" required>
+                      <option value="" disabled selected>Sélectionnez un type</option>
+                      <option value="Maison individuelle">Maison individuelle</option>
+                      <option value="Immeuble">Immeuble</option>
+                      <option value="Appartement">Appartement</option>
+                      <option value="Magasins">Magasins</option>
+                    </select>
+                  </div>
+                  <div class="form-group">
+                    <label class="form-label" for="co-nb">Nombre de logements / locaux à gérer</label>
+                    <input class="form-input" type="number" id="co-nb" name="nb_logements" min="1" placeholder="Ex. 4" />
+                  </div>
+                  <div class="form-group" style="grid-column: 1/-1;">
+                    <label class="form-label" for="co-loc">Localisation exacte du bien</label>
+                    <input class="form-input" type="text" id="co-loc" name="localisation" placeholder="Quartier, rue, repère..." required />
+                  </div>
+                  <div class="form-group" style="grid-column: 1/-1;">
+                    <label class="form-label" for="co-message">Message / Vos attentes</label>
+                    <textarea class="form-textarea" id="co-message" name="message" placeholder="Vos attentes vis-à-vis de la gestion..."></textarea>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn--primary btn--lg" style="width:100%; margin-top:24px;">
+                  Envoyer ma demande
+                </button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         COORDONNÉES + CARTE
+         ══════════════════════════════════════════ -->
+    <section class="section bg-gray-50" aria-labelledby="coordonnees-title">
+      <div class="container">
+        <div class="grid-2" style="gap: 40px; align-items:stretch;">
+
+          <div class="card" data-animate style="padding: 40px;">
+            <h2 id="coordonnees-title" class="heading-md" style="color: var(--color-navy); margin-bottom: 24px;">
+              Nos Coordonnées
+            </h2>
+
+            <div class="flex" style="flex-direction:column; gap:20px;">
+              <div class="flex" style="gap:14px; align-items:flex-start;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2" style="flex-shrink:0; margin-top:2px;" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                <div>
+                  <p class="body-base" style="font-weight:600; color: var(--color-navy);">Adresse</p>
+                  <p class="body-sm text-muted">Abidjan, ABOBO Plateau Dokui<br/>23 BP 2693 Abidjan 23</p>
+                </div>
+              </div>
+
+              <div class="flex" style="gap:14px; align-items:flex-start;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2" style="flex-shrink:0; margin-top:2px;" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                <div>
+                  <p class="body-base" style="font-weight:600; color: var(--color-navy);">Téléphone / WhatsApp</p>
+                  <a href="tel:+2250707889831" class="body-sm text-muted" style="display:block;">+225 07 07 88 98 31</a>
+                </div>
+              </div>
+
+              <div class="flex" style="gap:14px; align-items:flex-start;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2" style="flex-shrink:0; margin-top:2px;" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <div>
+                  <p class="body-base" style="font-weight:600; color: var(--color-navy);">Email</p>
+                  <a href="mailto:masharimmobilier@gmail.com" class="body-sm text-muted" style="display:block;">masharimmobilier@gmail.com</a>
+                </div>
+              </div>
+
+              <div class="flex" style="gap:14px; align-items:flex-start;">
+                <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="var(--color-gold)" stroke-width="2" style="flex-shrink:0; margin-top:2px;" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                <div>
+                  <p class="body-base" style="font-weight:600; color: var(--color-navy);">Heures d'ouverture</p>
+                  <p class="body-sm text-muted">Lundi – Samedi : 08h00 – 18h00</p>
+                </div>
+              </div>
+            </div>
+
+            <a
+              href="https://wa.me/2250707889831?text=Bonjour%20MASHAR%2C%20je%20souhaite%20avoir%20des%20informations."
+              target="_blank" rel="noopener noreferrer"
+              class="btn btn--whatsapp"
+              style="width:100%; margin-top:28px; justify-content:center;"
+            >
+              💬 Discuter sur WhatsApp
+            </a>
+          </div>
+
+          <!-- Google Maps embed -->
+          <div class="card" data-animate style="padding:0; overflow:hidden; min-height:340px;">
+            <iframe
+              src="https://www.google.com/maps?q=Abobo%20Plateau%20Dokui%2C%20Abidjan%2C%20C%C3%B4te%20d%27Ivoire&output=embed"
+              width="100%" height="100%" style="border:0; min-height:340px;"
+              allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+              title="Localisation MASHAR Immobilier — Abobo Plateau Dokui, Abidjan">
+            </iframe>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+       ══════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Colonne 1 : Branding -->
+        <div>
+          <p class="footer__logo-name">MASHAR</p>
+          <p class="footer__logo-sub">Immobilier &amp; Services</p>
+          <p class="footer__slogan">"Votre bien est notre priorité"</p>
+          <p class="body-sm" style="color:rgba(255,255,255,0.55); line-height:1.7;">
+            MASHAR Immobilier est votre partenaire de confiance à
+            Abidjan pour la gestion locative clé en main et la
+            recherche de biens immobiliers sur-mesure.
+          </p>
+        </div>
+
+        <!-- Colonne 2 : Navigation -->
+        <div>
+          <p class="footer__heading">Navigation</p>
+          <ul class="footer__links">
+            <li><a href="index.html"            class="footer__link">Accueil</a></li>
+            <li><a href="nos-biens.html"         class="footer__link">Nos Biens</a></li>
+            <li><a href="gestion-locative.html"  class="footer__link">Gestion Locative</a></li>
+            <li><a href="a-propos.html"          class="footer__link">À Propos</a></li>
+            <li><a href="contact.html"           class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne 3 : Services -->
+        <div>
+          <p class="footer__heading">Nos Services</p>
+          <ul class="footer__links">
+            <li><a href="gestion-locative.html" class="footer__link">Gestion clé en main</a></li>
+            <li><a href="nos-biens.html"        class="footer__link">Location maisons</a></li>
+            <li><a href="nos-biens.html"        class="footer__link">Location appartements</a></li>
+            <li><a href="nos-biens.html"        class="footer__link">Magasins &amp; locaux</a></li>
+            <li><a href="contact.html"          class="footer__link">Confier un bien</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne 4 : Contact -->
+        <div>
+          <p class="footer__heading">Contact</p>
+
+          <div class="footer__contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>23 BP 2693 Abidjan 23<br/>Abobo Plateau Dokui</span>
+          </div>
+
+          <div class="footer__contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.59 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.95a16 16 0 0 0 6.06 6.06l.87-.87a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.75 16.92z"/></svg>
+            <a href="tel:+2250707889831" class="footer__link">+225 07 07 88 98 31</a>
+          </div>
+
+          <div class="footer__contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:masharimmobilier@gmail.com" class="footer__link">masharimmobilier@gmail.com</a>
+          </div>
+
+          <div class="footer__contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Lundi – Samedi : 08h00 – 18h00</span>
+          </div>
+
+          <!-- WhatsApp CTA footer -->
+          <a
+            href="https://wa.me/2250707889831?text=Bonjour%20MASHAR%2C%20je%20souhaite%20avoir%20des%20informations."
+            class="btn btn--whatsapp btn--sm"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="margin-top: 16px;"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+            Écrire sur WhatsApp
+          </a>
+        </div>
+
+      </div><!-- /.footer__grid -->
+
+      <!-- Footer bottom -->
+      <div class="footer__bottom">
+        <span>© 2025 MASHAR Immobilier &amp; Services. Tous droits réservés.</span>
+        <span>Abidjan, Côte d'Ivoire · 🇨🇮</span>
+      </div>
+
+    </div><!-- /.container -->
+  </footer>
+
+
+  <!-- ══════════════════════════════════════════
+       BOUTON RETOUR EN HAUT
+       ══════════════════════════════════════════ -->
+  <button id="scroll-top-btn" aria-label="Retour en haut de page" title="Retour en haut">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <!-- ══════════════════════════════════════════
+       BOUTON WHATSAPP FLOTTANT
+       ══════════════════════════════════════════ -->
+  <a
+    href="https://wa.me/2250707889831?text=Bonjour%20MASHAR%2C%20je%20souhaite%20avoir%20des%20informations."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Discuter sur WhatsApp"
+    title="Nous contacter sur WhatsApp"
+  >
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+    </svg>
+  </a>
+
+
+  <!-- ══════════════════════════════════════════
+       SCRIPTS
+       ══════════════════════════════════════════
+       Toute la logique JS (navbar scroll, lien actif,
+       hamburger mobile, animations, modales, scroll-top)
+       vit désormais UNIQUEMENT dans js/main.js — une
+       seule source de vérité, pas de code dupliqué.
+       ══════════════════════════════════════════ -->
+
+  <!-- Données des biens (nécessaire AVANT main.js sur les pages qui les affichent) -->
+  <script src="js/data-biens.js" defer></script>
+
+  <!-- Script JS principal (navbar, navigation, animations, modales, etc.) -->
+  <script src="js/main.js" defer></script>
+
+  <script defer>
+    // Initialiser les icônes Lucide une fois le DOM prêt
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    });
+  </script>
+
+</body>
+</html>

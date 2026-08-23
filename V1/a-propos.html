@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- SEO de base (à personnaliser par page) -->
+  <title>À Propos — Notre Histoire & Nos Valeurs | MASHAR Immobilier</title>
+  <meta name="description" content="Découvrez MASHAR Immobilier : notre histoire à Abobo Plateau Dokui, notre mission, nos valeurs (intégrité, réactivité, sécurité) et nos zones d'intervention à Abidjan." />
+
+  <!-- Open Graph (partage WhatsApp / réseaux) -->
+  <meta property="og:type"        content="website" />
+  <meta property="og:title"       content="À Propos — MASHAR Immobilier Abidjan" />
+  <meta property="og:description" content="Notre histoire, notre mission et nos valeurs : intégrité, réactivité, sécurité." />
+  <meta property="og:image"       content="assets/og-mashar.jpg" />
+  <meta property="og:url"         content="https://mashar-immobilier.ci" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+
+  <!-- Polices Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+
+  <!-- Icônes Lucide (SVG inline, léger) -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js" defer></script>
+
+  <!-- Design System MASHAR -->
+  <link rel="stylesheet" href="css/mashar.css" />
+</head>
+
+<body>
+
+  <!-- ══════════════════════════════════════════
+       NAVBAR
+       ══════════════════════════════════════════ -->
+  <header class="navbar" id="navbar" role="banner">
+    <div class="navbar__inner">
+
+      <!-- Logo -->
+      <a href="index.html" class="navbar__logo" aria-label="MASHAR Immobilier — Accueil">
+        <span class="navbar__logo-name">MASHAR</span>
+        <span class="navbar__logo-sub">Immobilier &amp; Services</span>
+      </a>
+
+      <!-- Navigation principale -->
+      <nav class="navbar__nav" role="navigation" aria-label="Navigation principale">
+        <a href="index.html"           class="navbar__link" data-page="index">Accueil</a>
+        <a href="nos-biens.html"       class="navbar__link" data-page="biens">Nos Biens</a>
+        <a href="gestion-locative.html"class="navbar__link" data-page="gestion">Gestion Locative</a>
+        <a href="a-propos.html"        class="navbar__link" data-page="apropos">À Propos</a>
+        <a href="contact.html"         class="navbar__link" data-page="contact">Contact</a>
+      </nav>
+
+      <!-- CTA + Hamburger -->
+      <div class="flex gap-3" style="align-items:center;">
+        <a
+          href="https://wa.me/2250707889831?text=Bonjour%20MASHAR%2C%20je%20souhaite%20avoir%20des%20informations."
+          class="navbar__cta"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Nous contacter sur WhatsApp"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+          </svg>
+          WhatsApp
+        </a>
+
+        <!-- Hamburger -->
+        <button
+          class="navbar__hamburger"
+          id="hamburger"
+          aria-label="Ouvrir le menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+
+    </div><!-- /.navbar__inner -->
+
+    <!-- Menu mobile -->
+    <nav
+      class="navbar__mobile-menu"
+      id="mobile-menu"
+      role="navigation"
+      aria-label="Menu mobile"
+    >
+      <a href="index.html"            class="navbar__link" data-page="index">Accueil</a>
+      <a href="nos-biens.html"        class="navbar__link" data-page="biens">Nos Biens</a>
+      <a href="gestion-locative.html" class="navbar__link" data-page="gestion">Gestion Locative</a>
+      <a href="a-propos.html"         class="navbar__link" data-page="apropos">À Propos</a>
+      <a href="contact.html"          class="navbar__link" data-page="contact">Contact</a>
+      <a
+        href="https://wa.me/2250707889831?text=Bonjour%20MASHAR%2C%20je%20souhaite%20avoir%20des%20informations."
+        class="btn btn--whatsapp btn--full"
+        target="_blank"
+        rel="noopener noreferrer"
+        style="margin-top: 8px;"
+      >
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+        </svg>
+        Nous contacter sur WhatsApp
+      </a>
+    </nav>
+
+  </header><!-- /navbar -->
+
+
+  <!-- ══════════════════════════════════════════
+       CONTENU PRINCIPAL — À remplacer par page
+       ══════════════════════════════════════════ -->
+  <main id="main-content" role="main">
+
+    <!-- ══════════════════════════════════════════
+         HERO
+         ══════════════════════════════════════════ -->
+    <section class="hero" style="min-height:58vh;" aria-label="Bannière à propos">
+      <div class="container hero__inner" style="text-align:center;">
+        <p class="label-overline text-gold animate-fade-up animate-delay-1">Notre histoire</p>
+        <h1 class="display-lg animate-fade-up animate-delay-2" style="margin: 20px auto 0; max-width: 720px;">
+          À Propos de <em style="color: var(--color-gold); font-style:normal;">MASHAR Immobilier</em>
+        </h1>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         NOTRE HISTOIRE & MISSION
+         ══════════════════════════════════════════ -->
+    <section class="section" aria-labelledby="histoire-title">
+      <div class="container">
+        <div class="grid-2" style="gap: 56px; align-items:center;">
+
+          <!-- IMAGE : photo de l'équipe / du bureau MASHAR à Abobo Dokui -->
+          <div class="img-placeholder img-placeholder--4-3" data-animate style="border-radius: var(--radius-2xl);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><path d="M21 15l-5-5L5 21"/></svg>
+            <span class="img-placeholder__label">IMAGE — Bureau / équipe MASHAR à Abobo Dokui</span>
+          </div>
+
+          <div data-animate>
+            <p class="section-header__overline">Notre histoire &amp; mission</p>
+            <h2 id="histoire-title" class="heading-lg" style="color: var(--color-navy); margin: 12px 0 20px;">
+              Une ambition claire pour l'immobilier ivoirien
+            </h2>
+            <p class="body-base text-muted" style="line-height: 1.8; margin-bottom: 20px;">
+              Basée à Abidjan, au cœur du quartier d'Abobo Plateau Dokui, MASHAR
+              Immobilier est née avec une ambition claire : moderniser et
+              sécuriser les services de gestion et de transaction immobilière en
+              Côte d'Ivoire.
+            </p>
+            <p class="body-base text-muted" style="line-height: 1.8;">
+              Nous croyons fermement que l'immobilier doit être synonyme de
+              sérénité. C'est pourquoi nous mettons au service des propriétaires
+              et des demandeurs de biens une structure rigoureuse, transparente
+              et résolument tournée vers le service client.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         NOS VALEURS
+         ══════════════════════════════════════════ -->
+    <section class="section bg-gray-50" aria-labelledby="valeurs-title">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <p class="section-header__overline">Ce qui nous guide</p>
+          <h2 id="valeurs-title" class="section-header__title">Nos Valeurs</h2>
+        </div>
+
+        <div class="grid-3" style="gap: 24px;">
+
+          <div class="card" data-animate style="padding: 36px; text-align:center;">
+            <p style="font-size: 40px; margin-bottom:16px;">🤝</p>
+            <h3 class="heading-sm" style="color: var(--color-navy); margin-bottom: 12px;">Intégrité</h3>
+            <p class="body-sm text-muted" style="line-height:1.7;">
+              Une gestion financière transparente et traçable à 100%.
+            </p>
+          </div>
+
+          <div class="card" data-animate style="padding: 36px; text-align:center;">
+            <p style="font-size: 40px; margin-bottom:16px;">⚡</p>
+            <h3 class="heading-sm" style="color: var(--color-navy); margin-bottom: 12px;">Réactivité</h3>
+            <p class="body-sm text-muted" style="line-height:1.7;">
+              Des réponses rapides pour les visites et le suivi des demandes.
+            </p>
+          </div>
+
+          <div class="card" data-animate style="padding: 36px; text-align:center;">
+            <p style="font-size: 40px; margin-bottom:16px;">🔒</p>
+            <h3 class="heading-sm" style="color: var(--color-navy); margin-bottom: 12px;">Sécurité</h3>
+            <p class="body-sm text-muted" style="line-height:1.7;">
+              Une protection juridique et contractuelle pour toutes les parties.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         ZONE D'INTERVENTION
+         ══════════════════════════════════════════ -->
+    <section class="section" aria-labelledby="zone-title">
+      <div class="container">
+        <div class="grid-2" style="gap: 56px; align-items:center;">
+
+          <div data-animate>
+            <p class="section-header__overline">Expertise locale</p>
+            <h2 id="zone-title" class="heading-lg" style="color: var(--color-navy); margin: 12px 0 20px;">
+              Notre Zone d'Intervention
+            </h2>
+            <p class="body-base text-muted" style="line-height: 1.8; margin-bottom: 28px;">
+              Ancrés à Abobo Plateau Dokui, nous intervenons dans l'ensemble du
+              Grand Abidjan, avec une parfaite maîtrise des spécificités de
+              chaque commune.
+            </p>
+            <div class="flex" style="flex-wrap:wrap; gap:10px;">
+              <span class="badge badge--navy">Abobo Dokui</span>
+              <span class="badge badge--navy">Cocody</span>
+              <span class="badge badge--navy">Angré</span>
+              <span class="badge badge--navy">Bingerville</span>
+              <span class="badge badge--navy">Plateau</span>
+              <span class="badge badge--navy">Marcory</span>
+              <span class="badge badge--navy">Yopougon</span>
+              <span class="badge badge--navy">II Plateaux</span>
+            </div>
+          </div>
+
+          <!-- IMAGE : carte d'Abidjan avec les zones couvertes en surbrillance -->
+          <div class="img-placeholder img-placeholder--4-3" data-animate style="border-radius: var(--radius-2xl);">
+            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 20l-5.447-2.724A1 1 0 0 1 3 16.382V5.618a1 1 0 0 1 1.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0 0 21 18.382V7.618a1 1 0 0 0-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+            <span class="img-placeholder__label">IMAGE — Carte des zones d'intervention à Abidjan</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         NOTRE ÉQUIPE
+         ══════════════════════════════════════════ -->
+    <section class="section bg-gray-50" aria-labelledby="equipe-title">
+      <div class="container">
+        <div class="section-header" data-animate>
+          <p class="section-header__overline">Les visages de MASHAR</p>
+          <h2 id="equipe-title" class="section-header__title">Notre Équipe</h2>
+        </div>
+
+        <div class="grid-3" style="gap: 24px;">
+
+          <div class="card" data-animate style="padding: 32px; text-align:center;">
+            <!-- IMAGE : photo du membre de l'équipe -->
+            <div class="img-placeholder img-placeholder--square" style="width:120px; height:120px; border-radius:50%; margin: 0 auto 20px;">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+            </div>
+            <h3 class="heading-sm" style="color: var(--color-navy); margin-bottom:4px;">Nom Prénom</h3>
+            <p class="body-sm text-muted">Fondateur / Direction</p>
+          </div>
+
+          <div class="card" data-animate style="padding: 32px; text-align:center;">
+            <div class="img-placeholder img-placeholder--square" style="width:120px; height:120px; border-radius:50%; margin: 0 auto 20px;">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+            </div>
+            <h3 class="heading-sm" style="color: var(--color-navy); margin-bottom:4px;">Nom Prénom</h3>
+            <p class="body-sm text-muted">Responsable Gestion Locative</p>
+          </div>
+
+          <div class="card" data-animate style="padding: 32px; text-align:center;">
+            <div class="img-placeholder img-placeholder--square" style="width:120px; height:120px; border-radius:50%; margin: 0 auto 20px;">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>
+            </div>
+            <h3 class="heading-sm" style="color: var(--color-navy); margin-bottom:4px;">Nom Prénom</h3>
+            <p class="body-sm text-muted">Conseiller Location</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════════════
+         CTA FINALE
+         ══════════════════════════════════════════ -->
+    <section class="section bg-navy" aria-label="Appel à l'action">
+      <div class="container flex-center flex-col" style="text-align:center; gap:24px;">
+        <h2 class="heading-lg text-white" style="max-width:640px;">
+          Envie de rejoindre les propriétaires et locataires qui nous font confiance ?
+        </h2>
+        <div class="flex gap-4" style="flex-wrap:wrap; justify-content:center;">
+          <a href="nos-biens.html" class="btn btn--primary btn--lg">🔍 Explorer nos Biens</a>
+          <a href="contact.html" class="btn btn--outline-white btn--lg">📩 Nous contacter</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <!-- ══════════════════════════════════════════
+       FOOTER
+       ══════════════════════════════════════════ -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer__grid">
+
+        <!-- Colonne 1 : Branding -->
+        <div>
+          <p class="footer__logo-name">MASHAR</p>
+          <p class="footer__logo-sub">Immobilier &amp; Services</p>
+          <p class="footer__slogan">"Votre bien est notre priorité"</p>
+          <p class="body-sm" style="color:rgba(255,255,255,0.55); line-height:1.7;">
+            MASHAR Immobilier est votre partenaire de confiance à
+            Abidjan pour la gestion locative clé en main et la
+            recherche de biens immobiliers sur-mesure.
+          </p>
+        </div>
+
+        <!-- Colonne 2 : Navigation -->
+        <div>
+          <p class="footer__heading">Navigation</p>
+          <ul class="footer__links">
+            <li><a href="index.html"            class="footer__link">Accueil</a></li>
+            <li><a href="nos-biens.html"         class="footer__link">Nos Biens</a></li>
+            <li><a href="gestion-locative.html"  class="footer__link">Gestion Locative</a></li>
+            <li><a href="a-propos.html"          class="footer__link">À Propos</a></li>
+            <li><a href="contact.html"           class="footer__link">Contact</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne 3 : Services -->
+        <div>
+          <p class="footer__heading">Nos Services</p>
+          <ul class="footer__links">
+            <li><a href="gestion-locative.html" class="footer__link">Gestion clé en main</a></li>
+            <li><a href="nos-biens.html"        class="footer__link">Location maisons</a></li>
+            <li><a href="nos-biens.html"        class="footer__link">Location appartements</a></li>
+            <li><a href="nos-biens.html"        class="footer__link">Magasins &amp; locaux</a></li>
+            <li><a href="contact.html"          class="footer__link">Confier un bien</a></li>
+          </ul>
+        </div>
+
+        <!-- Colonne 4 : Contact -->
+        <div>
+          <p class="footer__heading">Contact</p>
+
+          <div class="footer__contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <span>23 BP 2693 Abidjan 23<br/>Abobo Plateau Dokui</span>
+          </div>
+
+          <div class="footer__contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.42 2 2 0 0 1 3.59 1.25h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.95a16 16 0 0 0 6.06 6.06l.87-.87a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.75 16.92z"/></svg>
+            <a href="tel:+2250707889831" class="footer__link">+225 07 07 88 98 31</a>
+          </div>
+
+          <div class="footer__contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <a href="mailto:masharimmobilier@gmail.com" class="footer__link">masharimmobilier@gmail.com</a>
+          </div>
+
+          <div class="footer__contact-item">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+            <span>Lundi – Samedi : 08h00 – 18h00</span>
+          </div>
+
+          <!-- WhatsApp CTA footer -->
+          <a
+            href="https://wa.me/2250707889831?text=Bonjour%20MASHAR%2C%20je%20souhaite%20avoir%20des%20informations."
+            class="btn btn--whatsapp btn--sm"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="margin-top: 16px;"
+          >
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/></svg>
+            Écrire sur WhatsApp
+          </a>
+        </div>
+
+      </div><!-- /.footer__grid -->
+
+      <!-- Footer bottom -->
+      <div class="footer__bottom">
+        <span>© 2025 MASHAR Immobilier &amp; Services. Tous droits réservés.</span>
+        <span>Abidjan, Côte d'Ivoire · 🇨🇮</span>
+      </div>
+
+    </div><!-- /.container -->
+  </footer>
+
+
+  <!-- ══════════════════════════════════════════
+       BOUTON RETOUR EN HAUT
+       ══════════════════════════════════════════ -->
+  <button id="scroll-top-btn" aria-label="Retour en haut de page" title="Retour en haut">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <!-- ══════════════════════════════════════════
+       BOUTON WHATSAPP FLOTTANT
+       ══════════════════════════════════════════ -->
+  <a
+    href="https://wa.me/2250707889831?text=Bonjour%20MASHAR%2C%20je%20souhaite%20avoir%20des%20informations."
+    class="whatsapp-float"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Discuter sur WhatsApp"
+    title="Nous contacter sur WhatsApp"
+  >
+    <svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893A11.821 11.821 0 0020.885 3.488"/>
+    </svg>
+  </a>
+
+
+  <!-- ══════════════════════════════════════════
+       SCRIPTS
+       ══════════════════════════════════════════
+       Toute la logique JS (navbar scroll, lien actif,
+       hamburger mobile, animations, modales, scroll-top)
+       vit désormais UNIQUEMENT dans js/main.js — une
+       seule source de vérité, pas de code dupliqué.
+       ══════════════════════════════════════════ -->
+
+  <!-- Données des biens (nécessaire AVANT main.js sur les pages qui les affichent) -->
+  <script src="js/data-biens.js" defer></script>
+
+  <!-- Script JS principal (navbar, navigation, animations, modales, etc.) -->
+  <script src="js/main.js" defer></script>
+
+  <script defer>
+    // Initialiser les icônes Lucide une fois le DOM prêt
+    document.addEventListener('DOMContentLoaded', () => {
+      if (typeof lucide !== 'undefined') lucide.createIcons();
+    });
+  </script>
+
+</body>
+</html>
